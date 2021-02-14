@@ -66,6 +66,7 @@ const selectItem = (event, img) => {
   console.log(item);
   if (item === -1) {
     sliders.push(img);
+    //add slide index number how many image is selected for create slider 
     slideIndex+=1;
   } 
  
@@ -75,6 +76,7 @@ const selectItem = (event, img) => {
     item = sliders.indexOf(img);
     console.log('remove',item);
     sliders.splice(item,1);
+    // remove slide number count
     slideIndex-=1;
 
        
@@ -159,6 +161,7 @@ searchBtn.addEventListener('click', function () {
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
+// extra feature for error show 
 const displayError = error =>{
   const errorText = document.getElementById('error-text');
   errorText.innerText = error;
